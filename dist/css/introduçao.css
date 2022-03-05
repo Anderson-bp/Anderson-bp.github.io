@@ -1,0 +1,74 @@
+.introduçao {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+}
+.introduçao p {
+    font-family: Impact, 'Arial Narrow Bold',sans-serif;
+    font-size: 22px;
+}
+
+
+.introduçao h1 {
+    font-family: Verdana,Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.introduçao h1::before {
+    content: "";
+    display: block;
+    width: 166px;
+    height: 15px;
+    background: url("../img/linha.jpg") no-repeat center;
+    position: absolute;
+    top: -19px;
+    left:-1px;
+    z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    .introduçao h1 {
+        font-size: 3rem;
+    }
+    .introduçao h1::before {
+        width: 120px;
+        height: 10px;  
+    }   
+}
+
+@media (max-width: 800px) {
+    .introduçao {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    } 
+        .introduçao h1 {
+            font-size: 2rem;
+    }
+    .introduçao h1::before {
+        width: 100px;
+        height: 6px;  
+    } 
+}
+
+@media (max-width: 600px) {
+    .introduçao {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    } 
+        .introduçao h1 {
+            font-size: 1.5rem;
+    }
+    .introduçao h1::before {
+        width: 60px;
+        height: 5px;  
+    }
+}
